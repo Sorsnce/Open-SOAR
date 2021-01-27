@@ -2,7 +2,7 @@ FROM python:3.8
 RUN mkdir /opt/Open-SOAR
 RUN mkdir /opt/Open-SOAR/playbooks
 RUN mkdir /opt/Open-SOAR/modules
-RUN PYTHONPATH=/opt/Open-SOAR/modules
+ENV PYTHONPATH=/opt/Open-SOAR/modules
 COPY food_selector.py /opt/Open-SOAR/modules/
 COPY smtp.py /opt/Open-SOAR/modules/
 # Make sure you put a valid Git repo to pull in Playbooks from SourceControl
