@@ -12,3 +12,4 @@ RUN chmod +x /opt/Open-SOAR/playbooks/*
 RUN apt-get update
 RUN apt-get -y install cron
 RUN mv /opt/Open-SOAR/playbooks/running-playbooks /var/spool/cron/crontabs/
+#
