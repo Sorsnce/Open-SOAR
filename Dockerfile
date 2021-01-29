@@ -1,5 +1,5 @@
 FROM python:3.8
-LABEL maintainer='Trae2 Horton <sorsnce@protonmail>'
+LABEL maintainer='Trae3 Horton <sorsnce@protonmail>'
 RUN mkdir /opt/Open-SOAR
 RUN mkdir /opt/Open-SOAR/playbooks
 RUN mkdir /opt/Open-SOAR/modules
@@ -16,3 +16,4 @@ RUN service cron start
 RUN mv /opt/Open-SOAR/playbooks/running-playbooks /etc/cron.d/
 RUN crontab -u root /etc/cron.d/running-playbooks
 RUN service cron start
+RUN service cron restart
