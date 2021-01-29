@@ -14,4 +14,4 @@ RUN apt-get update
 RUN apt-get -y install cron
 RUN mv /opt/Open-SOAR/playbooks/running-playbooks /etc/cron.d/
 RUN crontab -u root /etc/cron.d/running-playbooks
-RUN service cron start
+CMD service cron start
