@@ -1,5 +1,5 @@
 FROM python:3.8
-LABEL maintainer='Trae Horton<sorsnce@protonmail>'
+LABEL maintainer='Trae Horton<sorsnce@protonmail.com>'
 RUN pip install requests
 RUN mkdir /opt/Open-SOAR
 RUN mkdir /opt/Open-SOAR/playbooks
