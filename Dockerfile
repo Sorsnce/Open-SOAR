@@ -14,11 +14,12 @@ COPY modules/* /opt/Open-SOAR/modules/
 RUN apt-get update
 RUN apt-get -y install cron
 #RUN mv /opt/Open-SOAR/playbooks/running-playbooks /etc/cron.d/
-RUN crontab -u root /etc/cron.d/running-playbooks
+#RUN crontab -u root /etc/cron.d/running-playbooks
 #CMD git clone github_repo
 CMD ["-repo"]
 CMD mv /soar-playbooks/* /opt/Open-SOAR/playbooks
 CMD chmod +x /opt/Open-SOAR/playbooks/*
 CMD mv /opt/Open-SOAR/playbooks/running-playbooks /etc/cron.d/
+CMD crontab -u root /etc/cron.d/running-playbooks
 CMD cat /etc/cron.d/running-playbooks
 CMD /usr/sbin/cron -f
