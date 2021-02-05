@@ -7,7 +7,7 @@ RUN mkdir /opt/Open-SOAR/modules
 ENV PYTHONPATH=/opt/Open-SOAR/modules
 COPY modules/* /opt/Open-SOAR/modules/
 # Make sure you put a valid Git repo to pull in Playbooks from SourceControl
-ENV LOCATION "git clone https://github.com/Sorsnce/Open-SOAR-public-playbooks.git"
+ENV LOCATION "https://github.com/Sorsnce/Open-SOAR-public-playbooks.git"
 RUN apt-get update
 RUN apt-get -y install cron
 #ENTRYPOINT ls /opt/Open-SOAR/playbooks/
