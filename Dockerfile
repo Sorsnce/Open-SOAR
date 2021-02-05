@@ -7,7 +7,7 @@ RUN mkdir /opt/Open-SOAR/modules
 ENV PYTHONPATH=/opt/Open-SOAR/modules
 COPY modules/* /opt/Open-SOAR/modules/
 # Make sure you put a valid Git repo to pull in Playbooks from SourceControl
-ENV github_repo "git clone https://sorsnce:3b5827d684920685bfbd17d0c1dc5c379dc4acb1@github.com/Sorsnce/soar-playbooks.git"
+ENV github_repo "git clone https://github.com/Sorsnce/Open-SOAR-public-playbooks.git"
 RUN ${github_repo}
 RUN mv /soar-playbooks/* /opt/Open-SOAR/playbooks
 RUN chmod +x /opt/Open-SOAR/playbooks/*
