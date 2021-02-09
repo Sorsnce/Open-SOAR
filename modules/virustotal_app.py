@@ -7,7 +7,6 @@ def hash_lookup(fileHash=None, apikey=None, **kwargs):
     apierror = False
     # VT Hash Checker
     url = 'https://www.virustotal.com/vtapi/v2/file/report'
-    # f8e816a0b4d791ce8d48de8427b454b547b44656c399da004beb249624901583
     params = {'apikey': apikey, 'resource': fileHash}
     response = requests.get(url, params=params)
 
@@ -21,11 +20,7 @@ def hash_lookup(fileHash=None, apikey=None, **kwargs):
         if result['response_code'] == 0:
             print("Hash was not found in Malware Database")
         elif result['response_code'] == 1:
-            # print(result)
-            #print("First Seen on VirusTotal: " + str(result['scan_date']))
             report = str(result['positives']) + "/" + str(result['total'])
-            #print("VirusTotal Report: " + str(result['positives']) + "/" + str(result['total']) + " detections found")
-            #print("Report Link: " + "https://www.virustotal.com/gui/file/" + fileHash + "/detection")
             link = "https://www.virustotal.com/gui/file/" + fileHash + "/detection"
             outputs = {"File Hash": fileHash,
                        "First Seen on VirusTotal": str(result['scan_date']),
