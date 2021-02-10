@@ -81,10 +81,10 @@ def open_vpn(api_code=None, token=None, **kwargs):
     f.write(cert)
     f.close()
     path = 'htb.ovpn'
-    x = subprocess.Popen(['sudo', 'openvpn', '--auth-nocache', '--config', path])
+    x = subprocess.Popen(['openvpn', '--auth-nocache', '--config', path])
     time.sleep(15)
     return cert
 
 
 def kill_ovpn():
-    x = subprocess.Popen(['sudo', 'killall', 'openvpn'])
+    x = subprocess.Popen(['killall', 'openvpn'])
