@@ -14,6 +14,7 @@ RUN apt-get update
 RUN apt-get -y install cron
 RUN apt-get -y install openvpn
 RUN apt-get -y install nmap
+RUN apt-get -y install sshpass
 #ENTRYPOINT ls /opt/Open-SOAR/playbooks/
 COPY ["bash_functions.sh","/bash_functions.sh"]
 RUN chmod +x /bash_functions.sh
