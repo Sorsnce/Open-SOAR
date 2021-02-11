@@ -7,6 +7,7 @@ RUN mkdir /opt/Open-SOAR/playbooks
 RUN mkdir /opt/Open-SOAR/modules
 ENV PYTHONPATH=/opt/Open-SOAR/modules
 COPY modules/* /opt/Open-SOAR/modules/
+COPY ssh_config /etc/ssh/ssh_config
 # Make sure you put a valid Git repo to pull in Playbooks from SourceControl
 ENV LOCATION "https://github.com/Sorsnce/Open-SOAR-public-playbooks.git"
 RUN apt-get update
