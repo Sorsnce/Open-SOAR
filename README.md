@@ -4,8 +4,8 @@ Open-SOAR is a project to allow opensource containerized workflows to allow Secu
 ---
 
 [![Docker Pulls](https://img.shields.io/docker/pulls/sorsnce/open-soar.svg)](https://hub.docker.com/r/sorsnce/open-soar)
-[![Dependency Status](https://shields.io/librariesio/release/github/sorsnce/open-soar)](https://github.com/Sorsnce/Open-SOAR/network/dependencies)
-[![GitHub Release](https://img.shields.io/github/release/sorsnce/Open-SOAR.svg)](https://github.com/sorsnce/Open-SOAR/releases/latest)
+[![Dependency Status](https://img.shields.io/librariesio/release/github/sorsnce/open-soar)](https://github.com/Sorsnce/Open-SOAR/network/dependencies)
+[![GitHub Release](https://img.shields.io/github/v/tag/sorsnce/open-soar)](https://github.com/sorsnce/Open-SOAR/releases/latest)
 
 
 ---
