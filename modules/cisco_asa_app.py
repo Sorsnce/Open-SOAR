@@ -45,3 +45,6 @@ def cisco_asa(device=None, username=None, password=None, port=None, secret=None,
         print("IP address added to BLACKLIST")
 
 
+    outputs = {}
+    assert json.dumps(outputs)  # Will raise an exception if the :outputs: object is not JSON-serializable
+    return outputs
