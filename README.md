@@ -19,4 +19,21 @@ $ docker run -ti <docker image>
 To help debug any issues you can drop into the shell of the container by using the following code:
 ```
 $ docker run -ti <docker image> /bin/bash
+```  
+You can also run Open-SOAR on Synology NAS
+
+
+# Splunk>Phantom
+#### All functions listed in the `modules` directory are compatible with Splunk>Phantom
+* Download the .py and .json for the custom function you want in Phnatom
+* These can be found in the `modules` dirctory
+* Run the following commands below
 ```
+$ tar -cvzf phantom.tgz <.json file> <.py files>
+```
+###### EXAMPLE
+```
+$ tar -cvzf phantom.tgz cisco_asa_app.json cisco_asa_app.py
+```
+
+* Now upload the `phantom.tgz` file into **Splunk>Phantom** and you should now have the imported function.
