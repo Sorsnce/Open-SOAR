@@ -1,0 +1,61 @@
+{
+    "create_time": "2021-03-02T15:05:11.050310+00:00",
+    "custom_function_id": "d7a5cd421ed776d3ef8cc4116ba6757ec88b06f1",
+    "description": "This custom function will perform several actions within Nessus Professional and Nessus Home edition.",
+    "draft_mode": false,
+    "inputs": [
+        {
+            "contains_type": [
+                "ip"
+            ],
+            "description": "This will be the IP address or DNS address of the Nessus scanner we are wanting to interact with.",
+            "input_type": "item",
+            "name": "server",
+            "placeholder": ""
+        },
+        {
+            "contains_type": [
+            	"username"
+            ],
+            "description": "This will be the username you use to log into the Nessus scanner.",
+            "input_type": "item",
+            "name": "username",
+            "placeholder": ""
+        },
+        {
+            "contains_type": [
+            	"password"
+            ],
+            "description": "This will be the password you use to log into the Nessus scanner. This cannot be an API key due to the limitations of Nessus Home edition.",
+            "input_type": "item",
+            "name": "password",
+            "placeholder": ""
+        },
+        {
+            "contains_type": [
+            	"CVE"
+            ],
+            "description": "This will be a list of CVEs you want to lookup in a specific scan within the Nessus Scanner. The format shoule be : [\"CVE-2018-12076\",\"CVE-2020-1245\",\"CVE-2021-5432\"]",
+            "input_type": "list",
+            "name": "cve_list",
+            "placeholder": ""
+        },
+        {
+            "contains_type": [],
+            "description": "This should be the scan ID in the Nessus Scaner. You can find the scan ID by looking at the URL in the nessus scanner. Example, open the results of your scan in the Nessus Scanner. Look at the URI, http://nussusscaner:8834/#/scans/reports/90/hosts - 90 would be your scan ID",
+            "input_type": "item",
+            "name": "scan_id",
+            "placeholder": ""
+        },
+        {
+            "contains_type": [],
+            "description": "This should be what \"action\" you want to perform on the Nessus Scanner. Such as cve, scan, etc.",
+            "input_type": "item",
+            "name": "action",
+            "placeholder": ""
+        }
+    ],
+    "outputs": [],
+    "platform_version": "4.10.1.45070",
+    "python_version": "3"
+}
