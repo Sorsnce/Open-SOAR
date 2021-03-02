@@ -1,7 +1,6 @@
 FROM python:3.8-slim-buster
 LABEL maintainer='Trae Horton<sorsnce@protonmail.com>'
-RUN pip install requests
-RUN pip install python-nmap
+RUN pip install -r requirements.txt
 RUN mkdir /opt/Open-SOAR
 RUN mkdir /opt/Open-SOAR/playbooks
 RUN mkdir /opt/Open-SOAR/modules
