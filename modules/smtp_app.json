@@ -1,0 +1,72 @@
+{
+    "create_time": "2021-03-03T14:17:48.349393+00:00",
+    "custom_function_id": "0d0b4c12701748556bdfca36eb5c299ab395d1a4",
+    "description": "This app will send an HTML formatted SMTP email to the specified values",
+    "draft_mode": false,
+    "inputs": [
+        {
+            "contains_type": [
+                "email"
+            ],
+            "description": "This should be the email sender. Depending on the SMTP server you may need 'Send As' access from this email address.",
+            "input_type": "item",
+            "name": "sender",
+            "placeholder": ""
+        },
+        {
+            "contains_type": [
+                "email"
+            ],
+            "description": "This should be a single or multiple email addresses you want to send the HTML formatted email too.",
+            "input_type": "list",
+            "name": "receiver",
+            "placeholder": ""
+        },
+        {
+            "contains_type": [
+                "password"
+            ],
+            "description": "This should be the password to the account that is \"sending\" this HTML formatted email.",
+            "input_type": "item",
+            "name": "password",
+            "placeholder": ""
+        },
+        {
+            "contains_type": [
+                "ip"
+            ],
+            "description": "This should be the IP address or DNS name of the SMTP server. i.e. smtp.yahoo.com",
+            "input_type": "item",
+            "name": "smtp_server",
+            "placeholder": ""
+        },
+        {
+            "contains_type": [
+                "html"
+            ],
+            "description": "This will be a HTML formatted string to use as the body of the email.",
+            "input_type": "item",
+            "name": "html_body",
+            "placeholder": ""
+        },
+        {
+            "contains_type": [],
+            "description": "This will be the subject of the email being sent.",
+            "input_type": "item",
+            "name": "subject",
+            "placeholder": ""
+        },
+        {
+            "contains_type": [
+                "port"
+            ],
+            "description": "This should be the port used to connect to the SMTP server. i.e. 25 or 465",
+            "input_type": "item",
+            "name": "port",
+            "placeholder": ""
+        }
+    ],
+    "outputs": [],
+    "platform_version": "4.10.1.45070",
+    "python_version": "3"
+}
