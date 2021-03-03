@@ -1,7 +1,7 @@
 {
     "create_time": "2021-03-01T21:41:12.418133+00:00",
     "custom_function_id": "e0f25b55f107f63fcbabb4f25f1e9e311dc060cb",
-    "description": "This app allows actions to take place on a Cisco ASA",
+    "description": "This app allows you to interact with a Cisco ASA. The app allows actions such as blocking an IP in an acl and turning off a interface.",
     "draft_mode": false,
     "inputs": [
         {
