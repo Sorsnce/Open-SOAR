@@ -4,7 +4,9 @@ Open-SOAR is a project to allow opensource containerized workflows to allow Secu
 All Donations in Cryptocurrency are highly appreciated:
 
 Bitcoin: 1QApAnZk7AhipRhVu367XeGDgxRriZ7zjv
+
 Litecoin:MQ8MYBvBhJ4z8mAu1N9gjx33sXb9NuFyZg
+
 Ethereum: 0x554489B7aE3B4Be4B4E82c473933725aeE29C417
 
 ---
