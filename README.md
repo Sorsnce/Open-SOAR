@@ -1,6 +1,12 @@
 # Open-SOAR
 Open-SOAR is a project to allow opensource containerized workflows to allow Security Orchestration Automation and Response. 
 
+All Donations in Cryptocurrency are highly appreciated:
+
+Bitcoin: 1QApAnZk7AhipRhVu367XeGDgxRriZ7zjv
+Litecoin:MQ8MYBvBhJ4z8mAu1N9gjx33sXb9NuFyZg
+Ethereum: 0x554489B7aE3B4Be4B4E82c473933725aeE29C417
+
 ---
 
 [![Docker Pulls](https://img.shields.io/docker/pulls/sorsnce/open-soar.svg)](https://hub.docker.com/r/sorsnce/open-soar)
