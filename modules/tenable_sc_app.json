@@ -1,0 +1,59 @@
+{
+    "create_time": "2021-03-08T21:28:15.293709+00:00",
+    "custom_function_id": "1585ac51fd2227a1d578e0427df71865ef6f963a",
+    "description": "This app allows you to interact with Tenable.SC. The app allows actions such as asset list updates etc.",
+    "draft_mode": false,
+    "inputs": [
+        {
+            "contains_type": [
+                "ip"
+            ],
+            "description": "This should be the ip or dns address of the Tenable.SC",
+            "input_type": "item",
+            "name": "server",
+            "placeholder": ""
+        },
+        {
+            "contains_type": [
+                "username"
+            ],
+            "description": "This should be the username you would use to log into Tenable.SC",
+            "input_type": "item",
+            "name": "username",
+            "placeholder": ""
+        },
+        {
+            "contains_type": [
+                "password"
+            ],
+            "description": "This should be the password you would use to log into Tenable.SC",
+            "input_type": "item",
+            "name": "password",
+            "placeholder": ""
+        },
+        {
+            "contains_type": [],
+            "description": "This will be the action you make to take within Tenable.SC",
+            "input_type": "item",
+            "name": "action",
+            "placeholder": ""
+        },
+        {
+            "contains_type": [],
+            "description": "This will be variable data passed to the function based on the action",
+            "input_type": "item",
+            "name": "data1",
+            "placeholder": ""
+        },
+        {
+            "contains_type": [],
+            "description": "This will be variable data passed to the function based on the action",
+            "input_type": "item",
+            "name": "data2",
+            "placeholder": ""
+        }
+    ],
+    "outputs": [],
+    "platform_version": "4.10.1.45070",
+    "python_version": "3"
+}

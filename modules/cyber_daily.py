@@ -1,8 +1,24 @@
 def cyber_daily(imap_server=None, username=None, password=None, folder_id=None, **kwargs):
+    """
+    This app is designed to take email threat Intel and parse CVE data as well as external IP data from an imap server. We currently only support Intel via O365 via Recorded Future's CyberDaily email feed.
+    
+    Args:
+        imap_server (CEF type: ip): This will be the IP or DNS of the imap server. We currently only support O365
+        username (CEF type: username): This will be the username you use to sign into the mailbox. We currently only support O365
+        password (CEF type: password): This will be the password you use to sign into the mailbox. We currently only support O365
+        folder_id: This will be the name of the folder you want to ingest email to look for CVEs and IP address.
+    
+    Returns a JSON-serializable object that implements the configured data paths:
+        cve (CEF type: cve): This will be a list of CVEs parsed from the threat Intel email
+        ip (CEF type: ip): This will be a list of IPs parsed from the threat Intel email
+    """
+
     import email
     import imaplib
     import json
     import re
+    # Uncomment this if you want to use this code in Splunk>Phantom custom function
+    #import phantom.rules as phantom
 
     mail = imaplib.IMAP4_SSL(imap_server)
     mail.login(username, password)

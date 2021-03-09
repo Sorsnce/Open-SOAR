@@ -1,0 +1,60 @@
+{
+    "create_time": "2021-03-09T13:43:32.129018+00:00",
+    "custom_function_id": "69ec2a803389e6fa3c614b3e25afdd261796ca70",
+    "description": "This app is designed to take email threat Intel and parse CVE data as well as external IP data from an imap server. We currently only support Intel via O365 via Recorded Future's CyberDaily email feed.",
+    "draft_mode": false,
+    "inputs": [
+        {
+            "contains_type": [
+                "ip"
+            ],
+            "description": "This will be the IP or DNS of the imap server. We currently only support O365",
+            "input_type": "item",
+            "name": "imap_server",
+            "placeholder": ""
+        },
+        {
+            "contains_type": [
+                "username"
+            ],
+            "description": "This will be the username you use to sign into the mailbox. We currently only support O365",
+            "input_type": "item",
+            "name": "username",
+            "placeholder": ""
+        },
+        {
+            "contains_type": [
+                "password"
+            ],
+            "description": "This will be the password you use to sign into the mailbox. We currently only support O365",
+            "input_type": "list",
+            "name": "password",
+            "placeholder": ""
+        },
+        {
+            "contains_type": [],
+            "description": "This will be the name of the folder you want to ingest email to look for CVEs and IP address.",
+            "input_type": "list",
+            "name": "folder_id",
+            "placeholder": ""
+        }
+    ],
+    "outputs": [
+        {
+            "contains_type": [
+                "cve"
+            ],
+            "data_path": "cve",
+            "description": "This will be a list of CVEs parsed from the threat Intel email"
+        },
+        {
+            "contains_type": [
+                "ip"
+            ],
+            "data_path": "ip",
+            "description": "This will be a list of IPs parsed from the threat Intel email"
+        }
+    ],
+    "platform_version": "4.10.1.45070",
+    "python_version": "3"
+}
