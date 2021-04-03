@@ -1,0 +1,54 @@
+{
+    "create_time": "2021-04-02T01:52:59.352381+00:00",
+    "custom_function_id": "b315476f42d5fd99c4830c7c4e2c038413f5e382",
+    "description": "This app allows you get interact with a Mealie cookbook server.",
+    "draft_mode": false,
+    "inputs": [
+        {
+            "contains_type": [
+                "username"
+            ],
+            "description": "This will be the username you use to log into the Mealie Server.",
+            "input_type": "item",
+            "name": "username",
+            "placeholder": ""
+        },
+        {
+            "contains_type": [
+                "password"
+            ],
+            "description": "This will be the password you use to log into the Mealie Server.",
+            "input_type": "item",
+            "name": "password",
+            "placeholder": ""
+        },
+        {
+            "contains_type": [],
+            "description": "This should be what \"action\" you want to perform on the Mealie Server.",
+            "input_type": "item",
+            "name": "action",
+            "placeholder": ""
+        },
+        {
+            "contains_type": [
+                "ip"
+            ],
+            "description": "This should be the DNS/IP address of the server.",
+            "input_type": "item",
+            "name": "server",
+            "placeholder": ""
+        },
+        {
+            "contains_type": [
+                "port"
+            ],
+            "description": "This should be the port used to connect to the Mealie server.",
+            "input_type": "item",
+            "name": "port",
+            "placeholder": ""
+        }
+    ],
+    "outputs": [],
+    "platform_version": "4.10.1.45070",
+    "python_version": "3"
+}
