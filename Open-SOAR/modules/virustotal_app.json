@@ -1,0 +1,29 @@
+{
+    "create_time": "2021-03-03T14:52:41.453866+00:00",
+    "custom_function_id": "5dc30e4a98408b9230165c87b6fcb566f9b3ee62",
+    "description": "This app allows you to look up filehashes within VirusTotal. You need a valid VirusTotal API Key to use this app.",
+    "draft_mode": false,
+    "inputs": [
+        {
+            "contains_type": [
+                "hash"
+            ],
+            "description": "This should be a valid file hash such as MD5, SHA1, or SHA256",
+            "input_type": "list",
+            "name": "filehash",
+            "placeholder": ""
+        },
+        {
+            "contains_type": [
+            	"apikey"
+            ],
+            "description": "This should be a valid VirusTotal API key. See the URI below to get APIKEY\nhttps://www.virustotal.com/gui/user/<username>/apikey",
+            "input_type": "list",
+            "name": "apikey",
+            "placeholder": ""
+        }
+    ],
+    "outputs": [],
+    "platform_version": "4.10.1.45070",
+    "python_version": "3"
+}

@@ -1,0 +1,63 @@
+{
+    "create_time": "2021-03-01T21:41:12.418133+00:00",
+    "custom_function_id": "e0f25b55f107f63fcbabb4f25f1e9e311dc060cb",
+    "description": "This app allows you to interact with a Cisco ASA. The app allows actions such as blocking an IP in an acl and turning off a interface.",
+    "draft_mode": false,
+    "inputs": [
+        {
+            "contains_type": [
+                "ip"
+            ],
+            "description": "This should be the ip or dns address of the cisco asa",
+            "input_type": "item",
+            "name": "device",
+            "placeholder": ""
+        },
+        {
+            "contains_type": [
+                "username"
+            ],
+            "description": "This should be the username you would use to SSH into the cisco asa",
+            "input_type": "item",
+            "name": "username",
+            "placeholder": ""
+        },
+        {
+            "contains_type": [
+                "password"
+            ],
+            "description": "This should be the password you would use to SSH into the cisco asa",
+            "input_type": "item",
+            "name": "password",
+            "placeholder": ""
+        },
+        {
+            "contains_type": [
+                "port"
+            ],
+            "description": "This would be the port you would use to SSH into the cisco asa. Default is TCP/22",
+            "input_type": "item",
+            "name": "port",
+            "placeholder": ""
+        },
+        {
+            "contains_type": [
+                "password"
+            ],
+            "description": "This is the `enable` password within a cisco asa",
+            "input_type": "item",
+            "name": "secret",
+            "placeholder": ""
+        },
+        {
+            "contains_type": [],
+            "description": "This will be the \"action\" you are wanting to take on the cisco asa. You can see in the if statement what your options are.",
+            "input_type": "item",
+            "name": "action",
+            "placeholder": ""
+        }
+    ],
+    "outputs": [],
+    "platform_version": "4.10.1.45070",
+    "python_version": "3"
+}
