@@ -53,6 +53,15 @@
             "input_type": "item",
             "name": "action",
             "placeholder": ""
+        },
+        {
+            "contains_type": [
+                "ip"
+            ],
+            "description": "This is the list of IP address to add to the scan or choice. All existing IPs will be removed.",
+            "input_type": "item",
+            "name": "ips",
+            "placeholder": ""
         }
     ],
     "outputs": [],

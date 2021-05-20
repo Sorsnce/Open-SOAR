@@ -1,4 +1,4 @@
-def nessus_app(server=None, username=None, password=None, cve_list=None, scan_id=None, action=None, **kwargs):
+def nessus_app(server=None, username=None, password=None, cve_list=None, scan_id=None, action=None, ips=None, **kwargs):
     """
     This custom function will perform several actions within Nessus Professional and Nessus Home edition.
 
@@ -14,6 +14,7 @@ def nessus_app(server=None, username=None, password=None, cve_list=None, scan_id
         nessus scanner. Example, open the results of your scan in the Nessus Scanner. Look at the URI,
         http://nussusscaner:8834/#/scans/reports/90/hosts - 90 would be your scan ID
         action: This should be what "action" you want to perform on the Nessus Scanner. Such as cve, scan, etc.
+        ips (CEF type: ip): This is the list of IP address to add to the scan or choice. All existing IPs will be removed.
 
     Returns a JSON-serializable object that implements the configured data paths:
 
@@ -56,7 +57,7 @@ def nessus_app(server=None, username=None, password=None, cve_list=None, scan_id
                 outputs = "No CVE found in Nessus"
         return outputs
 
-    def nessus_scan(server=None, username=None, password=None, scan_id=None, **kwargs):
+    def nessus_scan(server=None, username=None, password=None, scan_id=None, ips=None, **kwargs):
         """
         test scan for nessus
 
@@ -73,8 +74,13 @@ def nessus_app(server=None, username=None, password=None, cve_list=None, scan_id
         r = requests.post(url, headers=headers, verify=False, json=payload)
         data = json.loads(r.text)
         token = data["token"]
-        url2 = "https://{0}:8834/scans/{1}/launch".format(server, scan_id)
         header = {'X-API-Token': apitoken, 'X-Cookie': 'token=' + token}
+        if ips != None:
+            url4 = "https://{0}:8834/scans/{1}".format(server, scan_id)
+            payload1 = {"settings": {"launch_now": True, "name": "Open-SOAR Nessus Scan", "text_targets": ips}}
+            r = requests.put(url4, headers=header, verify=False, json=payload1)
+
+        url2 = "https://{0}:8834/scans/{1}/launch".format(server, scan_id)
         r = requests.post(url2, headers=header, verify=False)
         message = "Scan {0} successfully started".format(scan_id)
         return message
@@ -82,7 +88,7 @@ def nessus_app(server=None, username=None, password=None, cve_list=None, scan_id
     if action == "cve":
         data = cve_lookup(server=server, username=username, password=password, cve_list=cve_list, scan_id=scan_id)
     elif action == "scan":
-        data = nessus_scan(server=server, username=username, password=password, scan_id=scan_id)
+        data = nessus_scan(server=server, username=username, password=password, scan_id=scan_id, ips=ips)
 
     outputs = {"data": data}
 
