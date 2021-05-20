@@ -20,13 +20,13 @@ def mealie_app(username=None, password=None, action=None, server=None, port=None
 
     def shoppinglist(username=None, password=None, server=None, port=None, **kwargs):
         headers = {'Accept': 'application/json', 'Content-Type': 'application/x-www-form-urlencoded'}
-        url = "http://{0}:{1}/api/auth/token".format(server, port)
+        url = "https://{0}:{1}/api/auth/token".format(server, port)
         payload = "grant_type=&username={0}&password={1}&scope=&client_id=&client_secret=".format(username, password)
         r = requests.post(url, verify=False, json=payload, headers=headers)
         data = json.loads(r.text)
         token = data["access_token"]
 
-        url2 = "http://{0}:{1}/api/meal-plans/1/shopping-list".format(server, port)
+        url2 = "https://{0}:{1}/api/meal-plans/1/shopping-list".format(server, port)
         headers2 = {'Accept': 'application/json', 'Content-Type': 'application/x-www-form-urlencoded',
                     "Authorization": "Bearer {0}".format(token)}
         r2 = requests.get(url2, verify=False, headers=headers2)
